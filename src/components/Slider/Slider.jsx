@@ -3,11 +3,11 @@ import { Carousel } from 'react-responsive-carousel'
 const Slider = () => {
 
     const data = [
-        {id: 1, photo: '/public/bg1.png'},
-        {id: 2, photo: '/public/bg2.png'},
-        {id: 3, photo: '/public/bg3.png'},
-        {id: 4, photo: '/public/bg4.png'},
-        {id: 5, photo: '/public/bg5.png'}
+        {id: 1, photo: 'https://i.imgur.com/8O0HZ82.png'},
+        {id: 2, photo: 'https://i.imgur.com/MM5tbOe.png'},
+        {id: 3, photo: 'https://i.imgur.com/A4LGXgV.png'},
+        {id: 4, photo: 'https://i.imgur.com/kJOcm7R.png'},
+        {id: 5, photo: 'https://i.imgur.com/8RwCzV0.png'}
     ]
 
   return (
