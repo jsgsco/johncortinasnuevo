@@ -1,0 +1,105 @@
+.motorizacion
+    width: 100%
+    max-height: 500px
+    min-height: 500px
+    background-image: url('/src/assets/bg.png')
+    background-size: cover
+    background-position: right
+    background-repeat: no-repeat
+    position: relative
+    padding: 20px 0
+    display: flex
+
+    &_container
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+
+        &_info
+            width: 30%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            
+            h3
+                color: $gray
+                font-size: 13px
+                justify-content: start
+                display: flex
+
+            h2
+                font-size: 45px
+                justify-content: start
+                display: flex
+                position: relative
+
+                &::after, &::before
+                    content: ''
+                    position: absolute
+                    width: 300px
+                    height: 4px
+                    background-color: $primary
+                    top: 7rem
+
+            p
+                font-size: 16px
+                margin: 25px 0
+                text-align: start
+
+        &_img
+            width: 30%
+            margin-right: 20px
+            text-align:  center
+
+            img
+                width: 400px
+                max-height: 350px
+                min-height: 350px
+
+@media screen and (max-width: 1629px)
+    .motorizacion
+        &_container
+            &_img
+                margin-right: 10%
+
+@media screen and (max-width: 1300px)
+    .motorizacion
+        &_container
+            &_img
+                width: 35%
+
+            &_info
+                width: 40%
+
+@media screen and (max-width: 1024px)
+    .motorizacion
+        &_container
+            &_img
+                width: 30%
+
+                img
+                    width: 300px
+                    max-height: auto
+                    min-height: auto
+
+            &_info
+                width: 50%
+
+@media screen and (max-width: 768px)
+    .motorizacion
+        max-height: auto
+        min-height: auto
+        &_container
+            &_img
+                display: none
+
+            &_info
+                width: 100%
+                max-height: auto
+                min-height: auto
+                h2
+            
+                    &::after, &::before
+                        top: 7.3rem

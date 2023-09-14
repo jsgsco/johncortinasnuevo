@@ -1,0 +1,81 @@
+.productos
+    margin-top: 50px
+    height: auto
+    background-color: $primary-low
+    padding: 20px 0
+
+    h3
+        color: $gray
+        font-size: 13px
+        justify-content: end
+        display: flex
+
+    h2
+        font-size: 45px
+        justify-content: end
+        display: flex
+        color: $primary
+
+    &_productos
+        width: 100%
+        display: flex
+        justify-content: space-evenly
+        flex-wrap: wrap
+        align-items:  center
+
+        &_producto
+            width: 22%
+            padding: 10px
+            background-color: $white
+            min-height: 650px
+            max-height: 650px
+            border-radius: 10px
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+            margin-top: 25px
+
+            h2
+                display: inline-block
+                width: 100%
+                color: $black
+                
+            h3
+                display: inline-block
+                width: 100%
+
+            p
+                font-size: 16px
+                margin-bottom: 45px
+                text-align: justify
+                margin-top: 15px
+
+            &_img
+                width: 100%
+                border-radius: 10px
+                margin-bottom: 10px
+
+@media screen and (max-width: 1629px)
+    .productos
+        &_productos
+            &_producto
+                width: 28%
+
+@media screen and (max-width: 1300px)
+    .productos
+        &_productos
+            &_producto
+                width: 30%
+
+@media screen and (max-width: 1024px)
+    .productos
+        &_productos
+            &_producto
+                width: 45%
+
+@media screen and (max-width: 425px)
+    .productos
+        &_productos
+            &_producto
+                width: 90%
+
+                p
+                    margin-bottom: 30px

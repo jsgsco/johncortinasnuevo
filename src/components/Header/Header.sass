@@ -1,0 +1,90 @@
+.header
+    width: 100%
+    color: $white
+
+    &_redes
+        background-color: $primary
+        padding: 10px 0
+
+        &_container
+            width: 100%
+            display: flex
+            
+            &_item
+                margin-right: 25px
+                display: flex
+                align-items: center
+
+                p
+                    font-weight: 700
+
+                img
+                    width: 17px
+                    height: 15px
+                    margin-right: 8px
+
+    &_container
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items:  center
+        background-color: $black
+        padding: 10px 0
+
+        &_logo
+            width: 45%
+            display: flex
+
+            img
+                width: 250px
+
+        &_menu
+            width: 50%
+            display: flex
+            justify-content: end
+
+            a
+                text-decoration: none
+                color: $white
+                text-transform: uppercase
+                font-size: 13px
+                margin: 0px 5px
+                font-weight: 700
+
+                &:hover
+                    color: $primary
+
+@media screen and (max-width: 1024px)
+    .header
+        &_redes
+            &_container
+                &_item
+                    p
+                        font-size: 13px
+        &_container
+            flex-wrap: wrap
+            &_logo
+                width: 100%
+                display: flex
+                justify-content: center
+            &_menu
+                padding: 10px 0
+                width: 100%
+                justify-content: center
+
+@media screen and (max-width: 425px)
+    .header_redes
+        padding: 0px 0
+    .header_redes_container
+        display: inline-block
+    .header_redes_container_item
+        margin: 10px 0
+        width: 100%
+        justify-content: center
+        &:nth-child(2)
+            display: none 
+    .header_container_menu  
+        display: none
+    .header_container_logo
+        img
+            width: 70%

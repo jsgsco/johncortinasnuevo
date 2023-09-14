@@ -1,0 +1,49 @@
+.llamada
+    width: 100%
+    height: 300px
+    background-image: url('/src/assets/cortinas.png')
+    background-size: cover
+    background-position: right
+    background-repeat: no-repeat
+    position: relative
+    text-align: center
+    display: flex
+    flex-direction: column
+
+    p
+        font-size: 27px
+        font-weight: 700
+        color: $white
+        z-index: 2
+        position: relative
+
+    button
+        margin-top: 10px
+        padding: 10px
+        font-size: 17px
+        font-weight: 700
+        color: $white
+        background-color: $black
+        z-index: 2
+        position: relative
+        border-radius: 8px
+        border: none
+
+        &:hover
+            cursor: pointer
+
+    &::before 
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.575)
+        opacity: 0.7
+        z-index: 1
+
+@media screen and (max-width: 425px)
+    .llamada
+        p
+            font-size: 20px

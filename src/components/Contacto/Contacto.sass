@@ -1,0 +1,107 @@
+.contacto
+    width: 100%
+    max-height: 250px
+    min-height: 250px
+    padding: 20px 0
+    display: flex
+
+    &_container
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+
+        &_info
+            width: 50%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            
+            h3
+                color: $gray
+                font-size: 13px
+                justify-content: start
+                display: flex
+
+            h2
+                font-size: 45px
+                justify-content: start
+                display: flex
+                position: relative
+
+                &::after, &::before
+                    content: ''
+                    position: absolute
+                    width: 700px
+                    height: 4px
+                    background-color: $black
+                    top: 4rem
+
+            p
+                font-size: 16px
+                margin: 25px 0
+                text-align: start
+
+        &_items
+            width: 30%
+            display: flex
+            flex-wrap: wrap
+
+            &_item
+                width: 100%
+                display: flex
+                align-items: center
+                margin-top: 20px
+                justify-content: end
+
+                &_img
+                    width: 30px
+                    margin-right: 10px
+
+                &_info
+                    width: 60%
+                    
+                    h2
+                        font-size: 20px
+                    p
+                        font-size: 15px
+
+@media screen and (max-width: 1024px)
+    .contacto
+        &_container
+            &_items
+                width: 35%
+                &_item
+                    &_img
+                        width: 20px
+            &_info
+                width: 60%
+                h2
+                    &::after, &::before
+                        width: 400px
+
+@media screen and (max-width: 768px)
+    .contacto
+        &_container
+            flex-wrap: wrap
+            &_items
+                width: 100%
+                margin-bottom: 20px
+                &_item
+                    justify-content: center
+                    &_img
+                        width: 20px
+            &_info
+                width: 100%
+                h2
+                    &::after, &::before
+                        width: 400px
+            
+@media screen and (max-width: 425px)
+    .contacto
+        &_container
+            &_info
+                h2
+                    &::after, &::before
+                        width: 90%

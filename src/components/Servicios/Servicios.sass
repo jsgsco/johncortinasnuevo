@@ -1,0 +1,93 @@
+.servicios
+    width: 100%
+    min-height: 200px
+    max-height: 200px
+    display: flex
+
+    &_container
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 200px
+        max-height: 200px
+
+        &_items
+            width: 60%
+            display: flex
+            justify-content: space-between
+
+            &_item
+                text-align: center
+
+                h3
+                    color: $gray
+                    font-size: 15px
+                    margin-top: 6px
+
+                h2
+                    font-size: 22px
+                    color: $primary
+
+                img
+                    width: 40px
+                    height: 43px
+            
+        &_info
+            width: 35%
+
+            p
+                text-align: end
+
+            h2
+                font-size: 40px
+                text-align:  center
+                display: flex
+                justify-content: end
+            h3
+                color: $gray
+                font-size: 13px
+                display: flex
+                justify-content: end
+
+@media screen and (max-width: 1230px)
+    .servicios
+        &_container
+            &_info
+                h2
+                    font-size: 35px 
+
+@media screen and (max-width: 1024px)
+    .servicios
+        min-height: auto
+        max-height: auto
+        margin-bottom: 25px
+        margin-top: 25px
+        
+        &_container
+            flex-wrap: wrap-reverse
+            min-height: auto
+            max-height: auto
+            &_items
+                width: 100%
+            &_info
+                width: 100%
+                margin-bottom: 20px
+                p
+                    text-align: center
+                h2
+                    justify-content: center
+                h3
+                    justify-content: center
+                
+@media screen and (max-width: 425px)
+    .servicios
+        &_container
+            height: 100%
+            min-height: 100%
+            max-height: 100%
+            &_items
+                flex-direction: column
+                &_item
+                    width: 100%
+                    margin-top: 10px

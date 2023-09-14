@@ -1,0 +1,158 @@
+.asesoria
+    width: 100%
+    max-height: 400px
+    min-height: 400px
+    margin-top: 35px
+    overflow-x: hidden
+    overflow-y: hidden
+
+    &_container
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            background-color: rgba(128, 128, 128, 0.164)
+            border-radius: 50%
+            
+        &::before
+            left: -310px
+            width: 220px
+            height: 220px
+            top: calc(70% - 100px)
+
+        &::after
+            right: -370px
+            width: 300px
+            height: 300px
+            top: calc(30% - 100px)
+
+        &_info
+            width: 30%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            max-height: 400px
+            min-height: 400px
+            
+            h3
+                color: $gray
+                font-size: 13px
+                justify-content: end
+                display: flex
+
+            h2
+                font-size: 45px
+                justify-content: end
+                display: flex
+                position: relative
+
+                &::after, &::before
+                    content: ''
+                    position: absolute
+                    width: 200px
+                    height: 4px
+                    background-color: $primary
+                    top: 4rem
+
+            p
+                font-size: 16px
+                margin: 25px 0
+                text-align: end
+
+        &_img
+            width: 30%
+            position: relative
+            margin-left: 20px
+
+            img
+                width: 500px
+                max-height: 400px
+                min-height: 400px
+
+@media screen and (max-width: 1629px)
+    .asesoria
+        &_container
+            &_info
+                width: 40%
+
+@media screen and (max-width: 1300px)
+    .asesoria
+        &_container
+
+            &::before,
+            &::after
+                display: none
+            
+            &_info
+                width: 50%
+
+            &_img
+                width: 30%
+
+                img
+                    width: 400px
+                    max-height: 350px
+                    min-height: 350px
+
+@media screen and (max-width: 1024px)
+    .asesoria
+        &_container
+            justify-content: space-evenly
+            &_info
+                width: 60%
+                
+            &_img
+                width: 25%
+
+                img
+                    width: 310px
+                    max-height: auto
+                    min-height: auto
+
+@media screen and (max-width: 768px)
+    .asesoria
+        overflow-x: visible
+        overflow-y: visible
+        &_container
+            &_info
+                width: 100%
+                h3
+                    justify-content: center
+
+                h2
+                    justify-content: center
+
+                    &::after, &::before
+                        content: ''
+                        position: absolute
+                        width: 80%
+                        height: 4px
+                        background-color: $primary
+                        top: 4rem
+
+                p
+                    text-align: justify
+                    margin: 20px 0
+            &_img
+                display: none
+
+@media screen and (max-width: 425px)
+    .asesoria
+        &_container
+            &_info
+                h3
+                    display: inline-block
+                h2
+                    font-size: 40px
+                    display: inline-block
+                    &::after, &::before
+                        display: none
+                p
+                    font-size: 15px
+                    margin: 15px 0
