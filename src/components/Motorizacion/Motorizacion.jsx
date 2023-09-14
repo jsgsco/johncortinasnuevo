@@ -1,5 +1,5 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
-import Motori from '../../assets/Motorizacion.png'
+import Motori from '../../../public/Motorizacion.png'
 
 const Motorizacion = () => {
   return (

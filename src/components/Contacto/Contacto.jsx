@@ -1,7 +1,7 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
-import Location from '../../assets/location.png'
-import Mobile from '../../assets/mobile2.png'
-import Email from '../../assets/envelop.png'
+import Location from '../../../public/location.png'
+import Mobile from '../../../public/mobile2.png'
+import Email from '../../../public/envelop.png'
 
 const Contacto = () => {
 

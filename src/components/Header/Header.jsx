@@ -1,9 +1,9 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
-import Logo from '../../assets/logo.png'
+import Logo from '../../../public/logo.png'
 
-import Cel from '../../assets/mobile3.png'
-import Location from '../../assets/location1.png'
-import Email from '../../assets/envelop1.png'
+import Cel from '../../../public/mobile3.png'
+import Location from '../../../public/location1.png'
+import Email from '../../../public/envelop1.png'
 
 const Header = () => {
 

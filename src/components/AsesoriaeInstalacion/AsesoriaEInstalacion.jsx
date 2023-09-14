@@ -1,5 +1,5 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
-import Asesoria from '../../assets/cortinas.png'
+import Asesoria from '../../../public/cortinas.png'
 import Whastapp from '../WhatsappBTN/Whastapp'
 
 const AsesoriaEInstalacion = () => {

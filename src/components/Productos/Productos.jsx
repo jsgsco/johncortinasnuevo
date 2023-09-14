@@ -1,6 +1,6 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
 import Whatsapp from '../WhatsappBTN/Whastapp'
-import Sheer from '../../assets/sheer.png'
+import Sheer from '../../../public/sheer.png'
 
 const Productos = () => {
   return (

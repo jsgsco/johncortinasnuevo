@@ -1,8 +1,8 @@
 import LayoutPrincipal from '../../layout/LayoutPrincipal'
-import Reparacion from '../../assets/tools.png'
-import Preventiva from '../../assets/hammer.png'
-import Lavado from '../../assets/magic-wand.png'
-import Motorizacion from '../../assets/mobile.png'
+import Reparacion from '../../../public/tools.png'
+import Preventiva from '../../../public/hammer.png'
+import Lavado from '../../../public/magic-wand.png'
+import Motorizacion from '../../../public/mobile.png'
 
 const Servicios = () => {
 

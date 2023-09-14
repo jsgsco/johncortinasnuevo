@@ -1,4 +1,4 @@
-import WhatsappLogo from '../../assets/whatsapplogo.svg'
+import WhatsappLogo from '../../../public/whatsapplogo.svg'
 
 const Whastapp = ({color = ''}) => {
   return (

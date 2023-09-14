@@ -9,7 +9,7 @@ import Servicios from './components/Servicios/Servicios'
 import { Mapa } from './components/Mapa/Mapa'
 import Contacto from './components/Contacto/Contacto'
 
-import Whastapp from './assets/whatsapp-logo.png'
+import Whastapp from '../public/whatsapp-logo.png'
 
 const App = () => {
   return (
