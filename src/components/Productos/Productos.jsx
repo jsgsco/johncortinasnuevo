@@ -3,14 +3,26 @@ import LayoutPrincipal from '../../layout/LayoutPrincipal'
 import Whatsapp from '../WhatsappBTN/Whastapp'
 import Select from 'react-select'
 import useData from '../../hooks/useData'
+import CardImagen from '../CardImagen/CardImagen'
+
+import Modal from 'react-modal'
 
 const Productos = () => {
+
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0',
+        arrows: false
+      }
 
     const { data } = useData()
     const listData = data.data
     const [copyData, setCopyData] = useState(listData)
 
-    const itemsPerPage = 4
+    const itemsPerPage = 3
     const totalPages = Math.ceil(copyData.length / itemsPerPage)
 
     const [currentPage, setCurrentPage] = useState(1)
@@ -80,7 +92,55 @@ const Productos = () => {
         setCopyData(resultFilter)
     }
 
-    
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [itemInfo, setItemInfo] = useState({
+        "nombre": "",
+        "tipo": "",
+        "imagenes": [],
+        "descripcion": "",
+        "descripcion2": "",
+        "imagen": "",
+        "caracteristicas": ""
+    })
+
+    const openModal = () => {
+        setModalIsOpen(true)
+        document.body.classList.add("modal-open")
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false)
+        setItemInfo({
+            "nombre": "",
+            "tipo": "",
+            "imagenes": [],
+            "descripcion": "",
+            "descripcion2": "",
+            "imagen": "",
+            "caracteristicas": ""
+        })
+        document.body.classList.remove("modal-open")
+        document.querySelector("#productos")
+    }
+
+    const hanldleProducto = (item) => {
+        console.log('Click en Producto', item)
+        setItemInfo(item)
+        openModal()
+    }
+
+    const customStyles = {
+        content: {
+          maxWidth: "95%",
+          margin: "0 auto",
+          background: "white",
+          borderRadius: "5px",
+          padding: "20px"
+        },
+        overlay: {
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+        },
+      }
 
   return (
     <div className="productos" id="productos">
@@ -121,11 +181,14 @@ const Productos = () => {
             <div className="productos_productos">
                 {
                     currentItems.map(item => (
-                        <div className="productos_productos_producto" key={item.id}>
-                            <img className="productos_productos_producto_img" src={item.imagen} alt={item.nombre} />
+                        <div className="productos_productos_producto" key={item.id} onClick={ () => hanldleProducto(item) }>
+                            <CardImagen 
+                                className="productos_productos_producto_img"
+                                imagenes={item.imagenes}
+                            />
                             <h3>{item.tipo}</h3>
                             <h2>{item.nombre}</h2>
-                            <p>{item.descripcion}</p>
+                            <p>{item.minidescripcion}</p>
                             <Whatsapp 
                                 color={"blue"}
                                 nombre={item.nombre}
@@ -144,6 +207,48 @@ const Productos = () => {
                 ))}
             </div>
         </LayoutPrincipal>
+        <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            contentLabel="Detalles del Producto"
+            ariaHideApp={false}
+            style={customStyles}
+        >
+
+            {
+                itemInfo.length !== 0 && (
+                    <div className="productos_modal">
+                        <div className="productos_modal_head">
+                            <h3>{itemInfo.tipo}</h3>
+                            <h2>{itemInfo.nombre}</h2>
+                        </div>
+                        <div className="productos_modal_imgs">
+                            {
+                                itemInfo.imagenes.map(item => (
+                                    <img src={item} alt={item} key={item} />
+                                ))
+                            }
+                        </div>
+                        <div className="productos_modal_info">
+                            <h4>Descripción</h4>
+                            <p>{itemInfo.descripcion}</p>
+                            <p>{itemInfo.descripcion2}</p>
+                            <h5>Características</h5>
+                            <p>{itemInfo.caracteristicas}</p>
+                        </div>
+                        <div className="productos_modal_botones">
+                            <Whatsapp 
+                                nombre={itemInfo.nombre}
+                                tipo={itemInfo.tipo}
+                                imagen={itemInfo.imagen}
+                                texto="Cotizar por Whatsapp"
+                            />
+                            <button onClick={closeModal}>Cerrar</button>
+                        </div>
+                    </div>
+                )
+            }
+        </Modal>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const Slider = () => {
 
   return (
     <div className="slider">
-        <Carousel showArrows={false} showThumbs={false} autoPlay={true} infiniteLoop={true}>
+        <Carousel showArrows={false} showThumbs={false} autoPlay={true} infiniteLoop={true} showIndicators={false}>
             {
                 data.map(item => (
                     <div key={item.id} className="slider_item">

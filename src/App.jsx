@@ -23,7 +23,6 @@ const App = () => {
     const getData = async () => {
       try {
         setData(API)
-        console.log(data)
       } catch (error) {
         console.log(error)
       }

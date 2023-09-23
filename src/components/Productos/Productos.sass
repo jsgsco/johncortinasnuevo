@@ -58,8 +58,8 @@
             width: 22%
             padding: 10px
             background-color: $white
-            min-height: 680px
-            max-height: 650px
+            min-height: 630px
+            max-height: 630px
             border-radius: 10px
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
             margin-top: 25px
@@ -78,14 +78,75 @@
 
             p
                 font-size: 16px
-                margin-bottom: 45px
                 text-align: justify
                 margin-top: 15px
+                height: 200px
 
             &_img
                 width: 100%
                 border-radius: 10px
                 margin-bottom: 10px
+
+                img
+                    width: 100%
+
+            &:hover
+                cursor: pointer
+
+    &_modal
+        width: 90%
+        margin: auto
+        h3
+            color: $black
+            font-size: 13px
+            color: $gray
+            text-transform: uppercase
+
+        &_imgs
+            width: 100%
+            overflow-x: hidden
+            display: flex
+            justify-content: space-evenly
+            flex-wrap: wrap
+
+            img
+                width: 30%
+        
+        &_info
+            margin-top: 5px
+            p   
+                margin-top: 8px
+                text-align: justify
+                font-size: 15px
+
+            h4
+                font-size: 19px
+                color: $primary
+            h5
+                margin-top: 25px
+                font-size: 19px
+                color: $primary
+                    
+
+        &_botones
+            width: 30%
+            margin: auto
+            margin-top: 20px
+
+            button
+                margin-top: 5px
+                padding: 10px
+                border: none
+                border-radius: 8px
+                width: 100%
+                font-weight: bold
+                background-color: $black
+                color: $white
+                font-size: 15px
+
+                &:hover
+                    cursor: pointer
+                
 
 @media screen and (max-width: 1629px)
     .productos
@@ -105,18 +166,69 @@
             &_producto
                 width: 45%
 
-@media screen and (max-width: 769px)
+        &_modal
+            &_botones
+                width: 50%
+
+@media screen and (max-width: 768px)
     .productos
         &_filtros
             flex-direction: column
             &_producto
                 width: 100%
 
+    .productos
+        &_productos
+            &_producto
+                max-height: 650px
+                min-height: 650px
+
+        &_modal
+            &_imgs
+                justify-content: space-evenly
+                img
+                    margin: 4px
+                    width: 45%
+            &_botones
+                margin-top: 20px
+                width: 70%
+
 @media screen and (max-width: 425px)
     .productos
         &_productos
             &_producto
                 width: 90%
+                max-height: 680px
+                min-height: 680px
 
                 p
-                    margin-bottom: 30px
+                    font-size: 16px
+        &_modal
+            width: 100%
+            &_imgs
+                img
+                    margin: 4px 0
+                    width: 100%
+            &_botones
+                margin-top: 20px
+                width: 100%
+
+@media screen and (max-width: 375px)
+    .productos
+        &_productos
+            &_producto
+                max-height: 650px
+                min-height: 650px
+
+                p
+                    font-size: 15px
+
+@media screen and (max-width: 320px)
+    .productos
+        &_productos
+            &_producto
+                max-height: 600px
+                min-height: 600px
+
+                p
+                    font-size: 15px
