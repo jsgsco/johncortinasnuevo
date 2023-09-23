@@ -6,13 +6,12 @@ import Location from '../../../public/location1.png'
 import Email from '../../../public/envelop1.png'
 
 const Header = () => {
-
   const menu = [
     {id: 1, nombre: 'Persianas', tag: '#persianas'},
     {id: 2, nombre: 'Cortinas', tag: '#productos'},
     {id: 3, nombre: 'Motorización', tag: '#motorizacion'},
     {id: 4, nombre: 'Toldos', tag: '#productos'},
-    {id: 5, nombre: 'Promociones', tag: ''},
+    {id: 5, nombre: 'Promociones', tag: 'https://www.instagram.com/johncortinasypersianas/'},
     {id: 6, nombre: 'Servicios', tag: '#servicios'},
     {id: 7, nombre: 'Contacto', tag: '#contacto'}
   ]
