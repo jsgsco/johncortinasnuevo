@@ -21,9 +21,13 @@ const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('data.json')
+        const response = await fetch('https://woombatcgsite.s3.amazonaws.com/data.json', {
+          method: 'GET',
+          mode: 'cors',
+        })
         const data = await response.json()
         setData(data)
+        console.log(data)
       } catch (error) {
         console.log(error)
       }
