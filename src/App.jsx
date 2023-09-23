@@ -11,6 +11,7 @@ import { Mapa } from './components/Mapa/Mapa'
 import Contacto from './components/Contacto/Contacto'
 import Whastapp from '../public/whatsapp-logo.png'
 import Instagram from '../public/instagram-logo.png'
+import { API } from './API'
 
 import CortinasContext from './context/CortinasContext'
 
@@ -21,12 +22,7 @@ const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('https://woombatcgsite.s3.amazonaws.com/data.json', {
-          method: 'GET',
-          mode: 'cors',
-        })
-        const data = await response.json()
-        setData(data)
+        setData(API)
         console.log(data)
       } catch (error) {
         console.log(error)
