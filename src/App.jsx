@@ -82,6 +82,9 @@ const App = () => {
             />
           </a>
         </div>
+        <footer className="footer">
+          <p>Recibimos todas las tarjetas</p>
+        </footer>
       </CortinasContext.Provider>
     </>
   )

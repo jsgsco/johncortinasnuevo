@@ -56,6 +56,7 @@ const Productos = () => {
 
     const listaTipoPersianas = resultado.Persianas
     const listaTipoCortinas = resultado.Cortinas
+    const listaTipoToldos = resultado.Toldos
 
     let productosUnicos = [...new Set(listData.map(item => item.producto))]
 
@@ -172,6 +173,17 @@ const Productos = () => {
                             <h4>Filtro por Tipo de Cortinas</h4>
                             <Select
                                 options={ listaTipoCortinas.map(item => ({ label: item, value: item  })) }
+                                onChange={ handleSelecTipo }
+                            />
+                        </div>
+                    )
+                }
+                {
+                    producto === 'Toldos' && (
+                        <div className="productos_filtros_producto">
+                            <h4>Filtro por Tipo de Toldos</h4>
+                            <Select
+                                options={ listaTipoToldos.map(item => ({ label: item, value: item  })) }
                                 onChange={ handleSelecTipo }
                             />
                         </div>
